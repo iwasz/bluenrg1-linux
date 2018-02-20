@@ -1,0 +1,4 @@
+mkdir build
+cd build
+cmake -DCMAKE_CXX_COMPILER=/home/iwasz/local/share/cortex-m0/arm-none-eabi/bin/arm-none-eabi-g++ -DCMAKE_C_COMPILER=/home/iwasz/local/share/cortex-m0/arm-none-eabi/bin/arm-none-eabi-gcc -DCMAKE_TOOLCHAIN_FILE=../stmBlueNRG-1.cmake ..
+openocd -f /home/iwasz/local/share/openocd/scripts/interface/stlink.cfg -f /home/iwasz/local/share/openocd/scripts/target/bluenrg-x.cfg -c 'program bluenrg1.elf verify reset'
